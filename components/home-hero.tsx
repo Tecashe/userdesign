@@ -136,7 +136,7 @@
 //   return (
 //     <section className="relative min-h-screen overflow-hidden bg-[#FAF8F5]">
 
-//       {/* â”€â”€ Subtle warm grain texture overlay â”€â”€ */}
+//       {/* Ã¢â€â‚¬Ã¢â€â‚¬ Subtle warm grain texture overlay Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //       <div
 //         className="absolute inset-0 pointer-events-none opacity-[0.03]"
 //         style={{
@@ -146,7 +146,7 @@
 //         }}
 //       />
 
-//       {/* â”€â”€ Large decorative blob top-right â”€â”€ */}
+//       {/* Ã¢â€â‚¬Ã¢â€â‚¬ Large decorative blob top-right Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //       <svg
 //         className="absolute top-0 right-0 w-[55%] max-w-[680px] opacity-60 pointer-events-none"
 //         viewBox="0 0 600 520"
@@ -160,7 +160,7 @@
 //         />
 //       </svg>
 
-//       {/* â”€â”€ Small decorative blob bottom-left â”€â”€ */}
+//       {/* Ã¢â€â‚¬Ã¢â€â‚¬ Small decorative blob bottom-left Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //       <svg
 //         className="absolute bottom-0 left-0 w-[35%] max-w-[400px] opacity-50 pointer-events-none"
 //         viewBox="0 0 400 360"
@@ -174,7 +174,7 @@
 //         />
 //       </svg>
 
-//       {/* â”€â”€ Paintbrush stroke behind image (inspired by BraVaa) â”€â”€ */}
+//       {/* Ã¢â€â‚¬Ã¢â€â‚¬ Paintbrush stroke behind image (inspired by BraVaa) Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //       <svg
 //         className="absolute right-0 top-[8%] w-[52%] max-w-[660px] pointer-events-none hidden lg:block"
 //         viewBox="0 0 640 580"
@@ -192,18 +192,18 @@
 //         />
 //       </svg>
 
-//       {/* â”€â”€ NAVBAR SPACER â”€â”€ */}
+//       {/* Ã¢â€â‚¬Ã¢â€â‚¬ NAVBAR SPACER Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //       <div className="h-24 lg:h-28" />
 
-//       {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//       {/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 //           MAIN CONTENT GRID
-//       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+//       Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */}
 //       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-0">
 //         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[calc(100vh-7rem)]">
 
-//           {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//               LEFT â€” COPY
-//           â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+//           {/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+//               LEFT Ã¢â‚¬â€ COPY
+//           Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */}
 //           <div className="space-y-7 lg:pr-10 z-10 relative">
 
 //             {/* Kicker pill */}
@@ -212,7 +212,7 @@
 //               #1 STEM Provider in East Africa
 //             </div>
 
-//             {/* Headline â€” inspired by Progress template's editorial weight */}
+//             {/* Headline Ã¢â‚¬â€ inspired by Progress template's editorial weight */}
 //             <h1 className="text-[2.6rem] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-extrabold text-[#0f1117] leading-[1.08] tracking-tight">
 //               Unlock Your Child&apos;s{' '}
 //               <br className="hidden sm:block" />
@@ -245,7 +245,7 @@
 //               CBC-aligned curriculum, hands-on learning, proven results.
 //             </p>
 
-//             {/* â”€â”€ Program icon pills â”€â”€ */}
+//             {/* Ã¢â€â‚¬Ã¢â€â‚¬ Program icon pills Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //             <div className="flex flex-wrap gap-2 pt-1">
 //               {[
 //                 { icon: Code2, label: 'Coding' },
@@ -263,7 +263,7 @@
 //               ))}
 //             </div>
 
-//             {/* â”€â”€ CTAs â”€â”€ */}
+//             {/* Ã¢â€â‚¬Ã¢â€â‚¬ CTAs Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //             <div className="flex flex-col sm:flex-row gap-3 pt-2">
 //               <Link
 //                 href="/programs"
@@ -284,7 +284,7 @@
 //               </a>
 //             </div>
 
-//             {/* â”€â”€ Trust strip â”€â”€ */}
+//             {/* Ã¢â€â‚¬Ã¢â€â‚¬ Trust strip Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //             <div className="pt-6 border-t border-[#e8e4dc]">
 //               <p className="text-xs font-semibold uppercase tracking-widest text-[#9ca0ac] mb-3">
 //                 Trusted by Kenya&apos;s Leading Schools
@@ -302,15 +302,15 @@
 //             </div>
 //           </div>
 
-//           {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//               RIGHT â€” IMAGE CLUSTER
-//           â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+//           {/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+//               RIGHT Ã¢â‚¬â€ IMAGE CLUSTER
+//           Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */}
 //           <div className="relative flex items-center justify-center lg:justify-end h-[480px] sm:h-[560px] lg:h-[calc(100vh-7rem)] max-h-[700px]">
 
-//             {/* â”€â”€ HEXAGON IMAGE CLUSTER (inspired by Progress template) â”€â”€ */}
+//             {/* Ã¢â€â‚¬Ã¢â€â‚¬ HEXAGON IMAGE CLUSTER (inspired by Progress template) Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //             <div className="relative w-full max-w-[480px] h-full">
 
-//               {/* â”€â”€ Hex 1 â€” LARGE, main hero image â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Hex 1 Ã¢â‚¬â€ LARGE, main hero image Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <div
 //                 className="absolute"
 //                 style={{
@@ -346,7 +346,7 @@
 //                 />
 //               </div>
 
-//               {/* â”€â”€ Hex 2 â€” MEDIUM, bottom-left â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Hex 2 Ã¢â‚¬â€ MEDIUM, bottom-left Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <div
 //                 className="absolute"
 //                 style={{
@@ -379,7 +379,7 @@
 //                 />
 //               </div>
 
-//               {/* â”€â”€ Hex 3 â€” SMALL, top-left accent â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Hex 3 Ã¢â‚¬â€ SMALL, top-left accent Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <div
 //                 className="absolute hidden sm:block"
 //                 style={{
@@ -396,7 +396,7 @@
 //                     background: 'hsl(var(--primary) / 0.12)',
 //                   }}
 //                 >
-//                   {/* Decorative hex â€” filled with pattern */}
+//                   {/* Decorative hex Ã¢â‚¬â€ filled with pattern */}
 //                   <div className="absolute inset-0 flex items-center justify-center">
 //                     <div className="grid grid-cols-3 gap-1 opacity-60">
 //                       {Array.from({ length: 9 }).map((_, i) => (
@@ -411,7 +411,7 @@
 //                 </div>
 //               </div>
 
-//               {/* â”€â”€ Decorative corner accent lines (like Progress template) â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Decorative corner accent lines (like Progress template) Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <svg
 //                 className="absolute top-[2%] right-[10%] pointer-events-none"
 //                 width="32"
@@ -435,7 +435,7 @@
 //                 <rect x="0" y="0" width="5" height="32" rx="2.5" fill="hsl(var(--primary) / 0.25)" />
 //               </svg>
 
-//               {/* â”€â”€ Floating stat card â€” Students â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Floating stat card Ã¢â‚¬â€ Students Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <div
 //                 className="absolute z-20 bg-white rounded-2xl shadow-xl px-4 py-3 border border-primary/10 flex items-center gap-3"
 //                 style={{ bottom: '28%', right: '-2%' }}
@@ -454,7 +454,7 @@
 //                 </div>
 //               </div>
 
-//               {/* â”€â”€ Floating stat card â€” Schools â”€â”€ */}
+//               {/* Ã¢â€â‚¬Ã¢â€â‚¬ Floating stat card Ã¢â‚¬â€ Schools Ã¢â€â‚¬Ã¢â€â‚¬ */}
 //               <div
 //                 className="absolute z-20 bg-white rounded-2xl shadow-xl px-4 py-3 border border-primary/10 flex items-center gap-3"
 //                 style={{ top: '18%', left: '-4%' }}
@@ -482,14 +482,14 @@
 //         {/* END grid */}
 //       </div>
 
-//       {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//       {/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
 //           BOTTOM FEATURE BAR (inspired by BraVaa)
-//       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+//       Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */}
 //       <div className="relative z-10 bg-white/80 backdrop-blur-sm border-t border-[#e8e4dc] mt-4 lg:mt-0">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 //           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
 //             {[
-//               { icon: Code2, title: 'Coding & Robotics', desc: 'Project-based STEM for Grades 1â€“8' },
+//               { icon: Code2, title: 'Coding & Robotics', desc: 'Project-based STEM for Grades 1Ã¢â‚¬â€œ8' },
 //               { icon: Brain, title: 'Abacus Mental Math', desc: 'Speed & accuracy from Pre-Primary' },
 //               { icon: Crown, title: 'Chess Mastery', desc: 'Strategy & critical thinking' },
 //               { icon: Bot, title: 'CBC-Aligned', desc: 'Integrated into school curriculum' },
@@ -576,7 +576,7 @@ export function HomeHero() {
       <div className="relative w-full px-4 sm:px-6 lg:px-8 pb-20 lg:pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center min-h-[calc(100vh-5rem)]">
 
-          {/* LEFT — COPY */}
+          {/* LEFT â€” COPY */}
           <div className="space-y-8 z-10 relative lg:pr-6">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#0f1117] leading-tight tracking-tight">
               Unlock Your Child&apos;s{' '}
@@ -628,148 +628,174 @@ export function HomeHero() {
 
           </div>
 
-          {/* RIGHT — MORPHING BLOB GALLERY */}
+          {/* RIGHT â€” MORPHING BLOB GALLERY */}
           <div className="relative flex items-center justify-center h-[500px] sm:h-[600px] lg:h-[calc(100vh-5rem)] -mx-4 sm:-mx-6 lg:mx-0 lg:min-h-[700px]">
             <div className="relative w-full h-full flex items-center justify-center">
 
-              {/* Central morphing blob */}
-              <div
-                className="absolute w-96 h-96 overflow-hidden shadow-2xl animate-morph animate-float"
-                style={{
-                  background: 'hsl(var(--primary) / 0.08)',
-                  filter: 'drop-shadow(0 25px 80px rgba(0,0,0,0.20))',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                }}
-              >
-                <Image
-                  src="/images/stem-kids-coding.jpg"
-                  alt="Kids coding"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-              </div>
-
-              {/* Top-left blob */}
-              <div
-                className="absolute w-64 h-64 overflow-hidden shadow-lg animate-morph hidden sm:block"
-                style={{
-                  top: '5%',
-                  left: '-8%',
-                  borderRadius: '45% 55% 60% 40% / 55% 45% 40% 60%',
-                  animation: 'morph 6s ease-in-out infinite',
-                  animationDelay: '1s',
-                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
-                }}
-              >
-                <Image
-                  src="/images/stem-girls.jpg"
-                  alt="Girls STEM"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Bottom-left blob */}
-              <div
-                className="absolute w-72 h-72 overflow-hidden shadow-lg animate-morph hidden md:block"
-                style={{
-                  bottom: '-10%',
-                  left: '-12%',
-                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
-                  animation: 'morph 7s ease-in-out infinite',
-                  animationDelay: '2s',
-                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
-                }}
-              >
-                <Image
-                  src="/images/stem-math.jpg"
-                  alt="Math"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Top-right blob */}
-              <div
-                className="absolute w-60 h-60 overflow-hidden shadow-lg animate-morph hidden sm:block"
-                style={{
-                  top: '2%',
-                  right: '-8%',
-                  borderRadius: '70% 30% 46% 54% / 30% 29% 71% 70%',
-                  animation: 'morph 6.5s ease-in-out infinite',
-                  animationDelay: '0.5s',
-                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
-                }}
-              >
-                <Image
-                  src="/images/stem-chess.jpg"
-                  alt="Chess"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Bottom-right blob */}
-              <div
-                className="absolute w-80 h-80 overflow-hidden shadow-xl animate-morph hidden lg:block"
-                style={{
-                  bottom: '-8%',
-                  right: '-10%',
-                  borderRadius: '56% 44% 50% 50% / 50% 50% 50% 50%',
-                  animation: 'morph 8s ease-in-out infinite',
-                  animationDelay: '1.5s',
-                  filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.15))',
-                  border: '4px solid hsl(var(--primary) / 0.1)',
-                }}
-              >
-                <Image
-                  src="/images/stem-robotics.jpg"
-                  alt="Robotics"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </div>
-
-              {/* Rotating ring decoration */}
+              {/* â”€â”€ Rotating ring decoration (behind all blobs) â”€â”€ */}
               <svg
-                className="absolute w-96 h-96 pointer-events-none animate-rotate"
+                className="absolute w-[420px] h-[420px] pointer-events-none animate-rotate"
                 style={{
                   top: '50%',
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
-                  opacity: 0.15,
+                  opacity: 0.12,
                 }}
                 viewBox="0 0 200 200"
                 aria-hidden="true"
               >
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  fill="none"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="2"
-                  strokeDasharray="10,10"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="70"
-                  fill="none"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="1"
-                  strokeDasharray="5,5"
-                />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="10,10" />
+                <circle cx="100" cy="100" r="70" fill="none" stroke="hsl(var(--primary))" strokeWidth="1" strokeDasharray="5,5" />
               </svg>
 
+              {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                  CENTER BLOB â€” hero-banner1.jpg â€” LARGEST (340Ã—340)
+                  FIX: Two-layer wrapper pattern
+                  â€¢ Outer div â†’ centering via transform (no animation)
+                  â€¢ Inner div â†’ morph + float animations only
+                    (border-radius anim & translateY don't conflict)
+              â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              <div
+                className="absolute"
+                style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}
+              >
+                <div
+                  className="animate-morph animate-float overflow-hidden shadow-2xl"
+                  style={{
+                    width: '340px',
+                    height: '340px',
+                    filter: 'drop-shadow(0 25px 80px rgba(0,0,0,0.20))',
+                  }}
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/hero-banner1.jpg"
+                      alt="Student learning STEM"
+                      fill
+                      className="object-cover object-center"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+                  </div>
+                </div>
+              </div>
+
+              {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                  TOP-LEFT â€” abacus.jpg â€” 170Ã—170
+              â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              <div
+                className="absolute hidden sm:block"
+                style={{
+                  top: '4%',
+                  left: '4%',
+                  width: '170px',
+                  height: '170px',
+                  zIndex: 5,
+                  borderRadius: '45% 55% 60% 40% / 55% 45% 40% 60%',
+                  overflow: 'hidden',
+                  animation: 'morph 6s ease-in-out infinite',
+                  animationDelay: '0.5s',
+                  filter: 'drop-shadow(0 12px 36px rgba(0,0,0,0.14))',
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/abacus.jpg"
+                    alt="Abacus mental math"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                  TOP-RIGHT â€” coding.jpg â€” 185Ã—185
+              â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              <div
+                className="absolute hidden sm:block"
+                style={{
+                  top: '4%',
+                  right: '4%',
+                  width: '185px',
+                  height: '185px',
+                  zIndex: 5,
+                  borderRadius: '70% 30% 46% 54% / 30% 29% 71% 70%',
+                  overflow: 'hidden',
+                  animation: 'morph 7s ease-in-out infinite',
+                  animationDelay: '1s',
+                  filter: 'drop-shadow(0 12px 36px rgba(0,0,0,0.14))',
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/coding.jpg"
+                    alt="Students coding"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                  BOTTOM-LEFT â€” chess.jpg â€” 200Ã—200
+              â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              <div
+                className="absolute hidden sm:block"
+                style={{
+                  bottom: '4%',
+                  left: '4%',
+                  width: '200px',
+                  height: '200px',
+                  zIndex: 5,
+                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
+                  overflow: 'hidden',
+                  animation: 'morph 8s ease-in-out infinite',
+                  animationDelay: '1.5s',
+                  filter: 'drop-shadow(0 12px 36px rgba(0,0,0,0.14))',
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/chess.jpg"
+                    alt="Chess strategy"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                  BOTTOM-RIGHT â€” robotics.jpg â€” 190Ã—190
+              â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              <div
+                className="absolute hidden lg:block"
+                style={{
+                  bottom: '4%',
+                  right: '4%',
+                  width: '190px',
+                  height: '190px',
+                  zIndex: 5,
+                  borderRadius: '56% 44% 30% 70% / 50% 50% 60% 40%',
+                  overflow: 'hidden',
+                  animation: 'morph 9s ease-in-out infinite',
+                  animationDelay: '2s',
+                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.15))',
+                }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/robotics.jpg"
+                    alt="Robotics"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+              </div>
 
             </div>
           </div>
+
 
         </div>
       </div>
@@ -779,7 +805,7 @@ export function HomeHero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { icon: Code2, title: 'Coding & Robotics', desc: 'Project-based STEM for Grades 1–8' },
+              { icon: Code2, title: 'Coding & Robotics', desc: 'Project-based STEM for Grades 1â€“8' },
               { icon: Brain, title: 'Abacus Mental Math', desc: 'Speed & accuracy from Pre-Primary' },
               { icon: Crown, title: 'Chess Mastery', desc: 'Strategy & critical thinking' },
               { icon: Bot, title: 'CBC-Aligned', desc: 'Integrated into school curriculum' },
