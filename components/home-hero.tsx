@@ -1,4 +1,4 @@
-﻿// 'use client';
+// 'use client';
 
 // import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 // import Link from 'next/link';
@@ -523,53 +523,79 @@ import Image from 'next/image';
 
 export function HomeHero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#FAF8F5] via-[#f5f2ed] to-[#efe9e0]">
+    <section className="relative min-h-screen overflow-hidden" style={{ background: '#FDFCF9' }}>
       <style>{`
         @keyframes morph {
-          0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-          50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+          0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+          33%  { border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%; }
+          66%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
           100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          50%       { transform: translateY(-18px); }
         }
         @keyframes rotate-slow {
           from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+          to   { transform: rotate(360deg); }
         }
-        .animate-morph {
-          animation: morph 8s ease-in-out infinite;
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        .animate-rotate {
-          animation: rotate-slow 20s linear infinite;
-        }
+        .animate-morph  { animation: morph 9s ease-in-out infinite both; }
+        .animate-float  { animation: float 4s ease-in-out infinite; }
+        .animate-rotate { animation: rotate-slow 24s linear infinite; }
       `}</style>
 
+      {/* ── BG Layer 1: Amber radial glow anchored to right-center ── */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        className="absolute pointer-events-none"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '128px',
+          top: '5%', right: '-8%',
+          width: '680px', height: '680px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, hsl(var(--primary) / 0.13) 0%, hsl(var(--primary) / 0.04) 48%, transparent 68%)',
         }}
       />
 
+      {/* ── BG Layer 2: Organic arch — right panel subtle fill + boundary line ── */}
       <svg
-        className="absolute top-0 right-0 w-[55%] max-w-[680px] opacity-60 pointer-events-none"
-        viewBox="0 0 600 520"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        className="absolute top-0 right-0 h-full w-[58%] pointer-events-none"
+        viewBox="0 0 580 900"
+        preserveAspectRatio="xMaxYMid slice"
         aria-hidden="true"
       >
         <path
-          d="M580 40 C620 140 590 280 520 360 C460 430 340 490 220 480 C100 470 20 390 10 270 C0 150 80 40 200 10 C320 -20 540 -60 580 40Z"
-          fill="hsl(var(--primary) / 0.08)"
+          d="M 110 0 C 60 0 0 0 0 0 L 580 0 L 580 900 L 0 900 C 0 900 60 900 110 900 C 380 900 555 715 555 450 C 555 185 380 0 110 0Z"
+          fill="hsl(var(--primary) / 0.048)"
+        />
+        <path
+          d="M 110 18 C 372 18 538 193 538 450 C 538 707 372 882 110 882"
+          fill="none" stroke="hsl(var(--primary) / 0.12)" strokeWidth="1"
         />
       </svg>
+
+      {/* ── BG Layer 3: Micro dot grid (whole canvas) ── */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, hsl(var(--primary) / 0.20) 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+          opacity: 0.38,
+        }}
+      />
+
+      {/* ── BG Layer 4: Left-side white guard (keeps copy readable) ── */}
+      <div
+        className="absolute inset-y-0 left-0 pointer-events-none"
+        style={{ width: '52%', background: 'linear-gradient(to right, #FDFCF9 55%, transparent)' }}
+      />
+
+      {/* ── BG Layer 5: Noise grain (premium finisher) ── */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.025]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat', backgroundSize: '128px',
+        }}
+      />
 
       <div className="h-12 sm:h-16 lg:h-20" />
 
@@ -655,16 +681,56 @@ export function HomeHero() {
                   â€¢ Inner div â†’ morph + float animations only
                     (border-radius anim & translateY don't conflict)
               â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+              {/* ── CENTER BLOB: outer = centering only, inner = animations ── */}
               <div
                 className="absolute"
                 style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}
               >
+                {/* Outer ring #1 — thick amber border, morphs opposite to image */}
                 <div
-                  className="animate-morph animate-float overflow-hidden shadow-2xl"
+                  style={{
+                    position: 'absolute', inset: '-16px',
+                    borderRadius: '62% 38% 34% 66% / 56% 34% 66% 44%',
+                    border: '2.5px solid hsl(var(--primary) / 0.30)',
+                    animation: 'morph 13s ease-in-out infinite reverse both',
+                    pointerEvents: 'none',
+                  }}
+                />
+                {/* Outer ring #2 — thin dashed, wider, slow morph */}
+                <div
+                  style={{
+                    position: 'absolute', inset: '-34px',
+                    borderRadius: '46% 54% 60% 40% / 52% 56% 44% 48%',
+                    border: '1px dashed hsl(var(--primary) / 0.18)',
+                    animation: 'morph 20s ease-in-out infinite both',
+                    pointerEvents: 'none',
+                  }}
+                />
+                {/* Accent dot — top-right of ring */}
+                <div
+                  style={{
+                    position: 'absolute', top: '-22px', right: '-8px',
+                    width: '10px', height: '10px', borderRadius: '50%',
+                    background: 'hsl(var(--primary))',
+                    boxShadow: '0 0 0 4px hsl(var(--primary) / 0.14)',
+                  }}
+                />
+                {/* Accent dot — bottom-left */}
+                <div
+                  style={{
+                    position: 'absolute', bottom: '-18px', left: '-4px',
+                    width: '7px', height: '7px', borderRadius: '50%',
+                    background: 'hsl(var(--primary) / 0.65)',
+                  }}
+                />
+                {/* THE IMAGE — starts blob-shaped immediately via borderRadius in style */}
+                <div
+                  className="animate-morph animate-float overflow-hidden"
                   style={{
                     width: '340px',
                     height: '340px',
-                    filter: 'drop-shadow(0 25px 80px rgba(0,0,0,0.20))',
+                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                    boxShadow: '0 20px 60px hsl(var(--primary) / 0.28), 0 6px 24px rgba(0,0,0,0.10), 0 0 0 1px hsl(var(--primary) / 0.08)',
                   }}
                 >
                   <div className="relative w-full h-full">
@@ -672,10 +738,16 @@ export function HomeHero() {
                       src="/images/hero-banner1.jpg"
                       alt="Student learning STEM"
                       fill
-                      className="object-cover object-center"
+                      className="object-cover object-top"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+                    {/* Amber-tinted vignette overlay */}
+                    <div
+                      style={{
+                        position: 'absolute', inset: 0,
+                        background: 'linear-gradient(160deg, transparent 40%, hsl(var(--primary) / 0.20) 100%)',
+                      }}
+                    />
                   </div>
                 </div>
               </div>
