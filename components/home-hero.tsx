@@ -612,17 +612,40 @@ export function HomeHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center min-h-[calc(100vh-5rem)]">
 
           {/* LEFT â€” COPY */}
-          <div className="space-y-8 z-10 relative lg:pr-6">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#0f1117] leading-tight tracking-tight">
-              Unlock Your Child&apos;s{' '}
-              <span className="relative inline-block" style={{ color: 'hsl(var(--primary))' }}>
-                STEM Potential
+          <div className="space-y-7 z-10 relative lg:pr-6">
+
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2.5">
+              <span style={{ width: '28px', height: '2px', background: 'hsl(var(--primary))', borderRadius: '2px', flexShrink: 0 }} />
+              <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'hsl(var(--primary))' }}>
+                Welcome to KEMSAP Aloha Africa
+              </span>
+            </div>
+
+            {/* Headline - editorial 3-line stack */}
+            <h1 style={{ lineHeight: 1.04, letterSpacing: '-0.025em', margin: 0 }}>
+              <span style={{ display: 'block', fontSize: 'clamp(2.5rem, 5vw, 4.1rem)', fontWeight: 900, color: '#0f1117' }}>
+                We Empower Kids
+              </span>
+              <span style={{ display: 'block', fontSize: 'clamp(2.5rem, 5vw, 4.1rem)', fontWeight: 900 }}>
+                <span style={{ color: '#0f1117' }}>Through </span>
+                <span style={{ color: 'hsl(var(--primary))', fontStyle: 'italic' }}>Coding,</span>
+              </span>
+              <span style={{ display: 'block', fontSize: 'clamp(2.5rem, 5vw, 4.1rem)', fontWeight: 900, color: 'hsl(var(--primary))', fontStyle: 'italic' }}>
+                Robotics, Chess &amp; Abacus.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-[#4a4f5e] leading-relaxed max-w-[520px] font-medium">
-              Master Coding, Robotics, Chess & Abacus with Africa&apos;s leading STEM educators.
+            {/* Amber separator */}
+            <div style={{ width: '48px', height: '3px', background: 'hsl(var(--primary))', borderRadius: '2px' }} />
+
+            {/* Body copy */}
+            <p style={{ fontSize: '1.05rem', lineHeight: 1.78, color: '#5a6070', maxWidth: '460px', fontWeight: 400 }}>
+              Curious about tracking your child&apos;s progress? Discover how our coding,
+              robotics, and abacus programs align with the CBC curriculum &mdash; and how we
+              support your child&apos;s growth every step of the way.
             </p>
+
 
             <div className="flex flex-wrap gap-3 pt-2">
               {[
