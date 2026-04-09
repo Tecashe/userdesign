@@ -544,14 +544,14 @@ export function HomeHero() {
         .animate-rotate { animation: rotate-slow 24s linear infinite; }
       `}</style>
 
-      {/* ── BG Layer 1: Amber radial glow anchored to right-center ── */}
+      {/* ── BG Layer 1: Top-left warm ambient fill — balances amber right, keeps copy readable ── */}
       <div
         className="absolute pointer-events-none"
         style={{
-          top: '5%', right: '-8%',
-          width: '680px', height: '680px',
+          top: '-10%', left: '-10%',
+          width: '600px', height: '600px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, hsl(var(--primary) / 0.13) 0%, hsl(var(--primary) / 0.04) 48%, transparent 68%)',
+          background: 'radial-gradient(circle, rgba(255,245,230,0.70) 0%, transparent 65%)',
         }}
       />
 
@@ -562,23 +562,32 @@ export function HomeHero() {
         preserveAspectRatio="xMaxYMid slice"
         aria-hidden="true"
       >
+        {/* Solid amber fill — the right stage */}
         <path
           d="M 110 0 C 60 0 0 0 0 0 L 580 0 L 580 900 L 0 900 C 0 900 60 900 110 900 C 380 900 555 715 555 450 C 555 185 380 0 110 0Z"
-          fill="hsl(var(--primary) / 0.048)"
+          fill="hsl(var(--primary))"
         />
+        {/* Subtle inner highlight — top edge light catch */}
+        <path
+          d="M 110 0 C 380 0 555 185 555 450"
+          fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="2"
+        />
+        {/* Arch boundary accent line */}
         <path
           d="M 110 18 C 372 18 538 193 538 450 C 538 707 372 882 110 882"
-          fill="none" stroke="hsl(var(--primary) / 0.12)" strokeWidth="1"
+          fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="1"
         />
       </svg>
 
-      {/* ── BG Layer 3: Micro dot grid (whole canvas) ── */}
+      {/* ── BG Layer 3: White micro dot grid — right (amber) side only ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(circle, hsl(var(--primary) / 0.20) 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.22) 1px, transparent 1px)',
           backgroundSize: '24px 24px',
-          opacity: 0.38,
+          maskImage: 'linear-gradient(to right, transparent 42%, black 58%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 42%, black 58%)',
+          opacity: 0.65,
         }}
       />
 
@@ -632,7 +641,7 @@ export function HomeHero() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link
                 href="/programs"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-base text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95 w-full sm:w-auto"
@@ -641,7 +650,7 @@ export function HomeHero() {
                   boxShadow: '0 12px 40px hsl(var(--primary) / 0.40)',
                 }}
               >
-                Start Free Trial
+                Track Child&apos;s Progress
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
@@ -686,33 +695,33 @@ export function HomeHero() {
                 className="absolute"
                 style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}
               >
-                {/* Outer ring #1 — thick amber border, morphs opposite to image */}
+                {/* Outer ring #1 — white border, morphs opposite to image — pops on amber */}
                 <div
                   style={{
                     position: 'absolute', inset: '-16px',
                     borderRadius: '62% 38% 34% 66% / 56% 34% 66% 44%',
-                    border: '2.5px solid hsl(var(--primary) / 0.30)',
+                    border: '2.5px solid rgba(255,255,255,0.55)',
                     animation: 'morph 13s ease-in-out infinite reverse both',
                     pointerEvents: 'none',
                   }}
                 />
-                {/* Outer ring #2 — thin dashed, wider, slow morph */}
+                {/* Outer ring #2 — thin white dashed, wider, slow morph */}
                 <div
                   style={{
                     position: 'absolute', inset: '-34px',
                     borderRadius: '46% 54% 60% 40% / 52% 56% 44% 48%',
-                    border: '1px dashed hsl(var(--primary) / 0.18)',
+                    border: '1px dashed rgba(255,255,255,0.30)',
                     animation: 'morph 20s ease-in-out infinite both',
                     pointerEvents: 'none',
                   }}
                 />
-                {/* Accent dot — top-right of ring */}
+                {/* Accent dot — top-right */}
                 <div
                   style={{
                     position: 'absolute', top: '-22px', right: '-8px',
                     width: '10px', height: '10px', borderRadius: '50%',
-                    background: 'hsl(var(--primary))',
-                    boxShadow: '0 0 0 4px hsl(var(--primary) / 0.14)',
+                    background: 'white',
+                    boxShadow: '0 0 0 4px rgba(255,255,255,0.20)',
                   }}
                 />
                 {/* Accent dot — bottom-left */}
@@ -720,7 +729,7 @@ export function HomeHero() {
                   style={{
                     position: 'absolute', bottom: '-18px', left: '-4px',
                     width: '7px', height: '7px', borderRadius: '50%',
-                    background: 'hsl(var(--primary) / 0.65)',
+                    background: 'rgba(255,255,255,0.70)',
                   }}
                 />
                 {/* THE IMAGE — starts blob-shaped immediately via borderRadius in style */}
@@ -805,6 +814,9 @@ export function HomeHero() {
                     fill
                     className="object-cover"
                   />
+                  {/* Lighten the dark coding.jpg so it doesn't read as solid black */}
+                  <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,200,100,0.18)', mixBlendMode: 'screen' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.08)' }} />
                 </div>
               </div>
 
@@ -852,6 +864,8 @@ export function HomeHero() {
                   animation: 'morph 9s ease-in-out infinite',
                   animationDelay: '2s',
                   filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.15))',
+                  outline: '2px solid rgba(255,255,255,0.35)',
+                  outlineOffset: '3px',
                 }}
               >
                 <div className="relative w-full h-full">
