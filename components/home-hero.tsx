@@ -517,187 +517,102 @@
 
 'use client';
 
-import { ArrowRight, Sparkles, Code2, Bot, Brain, Crown, Star, Users } from 'lucide-react';
+import { ArrowRight, Sparkles, Code2, Bot, Brain, Crown } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export function HomeHero() {
   return (
-    <section
-      className="relative min-h-screen overflow-hidden"
-      style={{ background: 'oklch(0.68 0.22 56)' }}
-    >
-      {/* â”€â”€ Keyframes â”€â”€ */}
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#FAF8F5] via-[#f5f2ed] to-[#efe9e0]">
       <style>{`
-        @keyframes morphBlob {
-          0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-          33%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-          66%  { border-radius: 50% 50% 40% 60% / 40% 70% 50% 60%; }
+        @keyframes morph {
+          0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+          50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
           100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
-        @keyframes floatUp {
+        @keyframes float {
           0%, 100% { transform: translateY(0px); }
-          50%       { transform: translateY(-18px); }
+          50% { transform: translateY(-20px); }
         }
-        @keyframes floatSide {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50%       { transform: translateY(-10px) rotate(1.5deg); }
+        @keyframes rotate-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
-        @keyframes ringRotate {
-          from { transform: translate(-50%, -50%) rotate(0deg); }
-          to   { transform: translate(-50%, -50%) rotate(360deg); }
+        .animate-morph {
+          animation: morph 8s ease-in-out infinite;
         }
-        @keyframes ringPulse {
-          0%, 100% { opacity: 0.18; }
-          50%       { opacity: 0.30; }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
         }
-        .blob-morph      { animation: morphBlob 10s ease-in-out infinite; }
-        .blob-morph-alt  { animation: morphBlob 13s ease-in-out infinite reverse; }
-        .blob-morph-slow { animation: morphBlob 16s ease-in-out infinite; }
-        .float-up        { animation: floatUp 4s ease-in-out infinite; }
-        .float-side      { animation: floatSide 5.5s ease-in-out infinite; }
-        .ring-rotate     { animation: ringRotate 28s linear infinite; }
-        .ring-pulse      { animation: ringPulse 4s ease-in-out infinite; }
+        .animate-rotate {
+          animation: rotate-slow 20s linear infinite;
+        }
       `}</style>
 
-      {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-          BACKGROUND LAYERS (5-layer depth)
-      â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-
-      {/* Layer 1 â€” Brighter amber glow orb, top-left */}
       <div
-        className="absolute -top-40 -left-40 w-[640px] h-[640px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, oklch(0.80 0.20 62) 0%, transparent 68%)' }}
-      />
-      {/* Layer 2 â€” Deeper amber orb, bottom-right */}
-      <div
-        className="absolute -bottom-40 -right-40 w-[560px] h-[560px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, oklch(0.52 0.22 46) 0%, transparent 68%)' }}
-      />
-
-      {/* Layer 3 â€” SVG noise grain texture */}
-      <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
           backgroundRepeat: 'repeat',
           backgroundSize: '128px',
-          opacity: 0.045,
-          mixBlendMode: 'overlay',
         }}
       />
 
-      {/* Layer 4 â€” White polka-dot pattern */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.20) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          opacity: 0.55,
-        }}
-      />
+      <svg
+        className="absolute top-0 right-0 w-[55%] max-w-[680px] opacity-60 pointer-events-none"
+        viewBox="0 0 600 520"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M580 40 C620 140 590 280 520 360 C460 430 340 490 220 480 C100 470 20 390 10 270 C0 150 80 40 200 10 C320 -20 540 -60 580 40Z"
+          fill="hsl(var(--primary) / 0.08)"
+        />
+      </svg>
 
-      {/* Layer 5 â€” Diagonal white sheen */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.09) 0%, transparent 55%, rgba(0,0,0,0.06) 100%)',
-        }}
-      />
+      <div className="h-12 sm:h-16 lg:h-20" />
 
-      {/* â”€â”€ Navbar spacer â”€â”€ */}
-      <div className="h-20 lg:h-24" />
+      <div className="relative w-full px-4 sm:px-6 lg:px-8 pb-20 lg:pb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center min-h-[calc(100vh-5rem)]">
 
-      {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-          MAIN CONTENT GRID
-      â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 lg:pb-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center min-h-[calc(100vh-7rem)]">
-
-          {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-              LEFT â€” COPY
-          â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
-          <div className="space-y-8 z-10 relative order-2 lg:order-1">
-
-            {/* Kicker pill */}
-            <div
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-sm font-bold w-fit"
-              style={{
-                background: 'rgba(255,255,255,0.18)',
-                backdropFilter: 'blur(14px)',
-                border: '1px solid rgba(255,255,255,0.38)',
-                color: 'white',
-              }}
-            >
-              <Sparkles className="w-4 h-4" />
-              #1 STEM Provider in East Africa
-              <Star className="w-3.5 h-3.5 fill-white opacity-80" />
-            </div>
-
-            {/* Headline */}
-            <h1
-              className="text-5xl sm:text-6xl lg:text-[3.8rem] xl:text-[4.4rem] font-black leading-[1.06] tracking-tight"
-              style={{ color: 'white', textShadow: '0 2px 32px rgba(0,0,0,0.12)' }}
-            >
-              Unlock Your<br />
-              Child&apos;s{' '}
-              <span
-                className="italic"
-                style={{
-                  color: 'rgba(255,255,255,0.92)',
-                  textDecoration: 'underline',
-                  textDecorationColor: 'rgba(255,255,255,0.35)',
-                  textDecorationThickness: '3px',
-                  textUnderlineOffset: '6px',
-                }}
-              >
-                STEM
+          {/* LEFT — COPY */}
+          <div className="space-y-8 z-10 relative lg:pr-6">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#0f1117] leading-tight tracking-tight">
+              Unlock Your Child&apos;s{' '}
+              <span className="relative inline-block" style={{ color: 'hsl(var(--primary))' }}>
+                STEM Potential
               </span>
-              <br />Potential.
             </h1>
 
-            {/* Subheadline */}
-            <p
-              className="text-lg sm:text-xl leading-relaxed max-w-[500px] font-medium"
-              style={{ color: 'rgba(255,255,255,0.82)' }}
-            >
-              Master Coding, Robotics, Chess &amp; Abacus with Africa&apos;s leading
-              educators. CBC-aligned, hands-on, proven results.
+            <p className="text-lg sm:text-xl text-[#4a4f5e] leading-relaxed max-w-[520px] font-medium">
+              Master Coding, Robotics, Chess & Abacus with Africa&apos;s leading STEM educators.
             </p>
 
-            {/* Program pills */}
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-3 pt-2">
               {[
-                { icon: Code2,  label: 'Coding'   },
-                { icon: Bot,    label: 'Robotics'  },
-                { icon: Brain,  label: 'Abacus'   },
-                { icon: Crown,  label: 'Chess'     },
+                { icon: Code2, label: 'Coding' },
+                { icon: Bot, label: 'Robotics' },
+                { icon: Brain, label: 'Abacus' },
+                { icon: Crown, label: 'Chess' },
               ].map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 cursor-default"
-                  style={{
-                    background: 'rgba(255,255,255,0.14)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255,255,255,0.30)',
-                    color: 'white',
-                  }}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-primary/20 text-sm font-semibold text-[#0f1117] shadow-sm"
                 >
-                  <Icon className="w-3.5 h-3.5" />
+                  <Icon className="w-4 h-4" style={{ color: 'hsl(var(--primary))' }} />
                   {label}
                 </div>
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-1">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="/programs"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-black text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-base text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95 w-full sm:w-auto"
                 style={{
-                  background: '#0f1117',
-                  color: 'white',
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.28)',
+                  background: 'hsl(var(--primary))',
+                  boxShadow: '0 12px 40px hsl(var(--primary) / 0.40)',
                 }}
               >
                 Start Free Trial
@@ -705,246 +620,186 @@ export function HomeHero() {
               </Link>
               <a
                 href="#programs"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-base transition-all duration-300 hover:bg-white/25 active:scale-95 w-full sm:w-auto"
-                style={{
-                  background: 'rgba(255,255,255,0.14)',
-                  backdropFilter: 'blur(14px)',
-                  border: '2px solid rgba(255,255,255,0.40)',
-                  color: 'white',
-                }}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-base bg-white border-2 border-primary/30 text-[#0f1117] hover:bg-primary/5 transition-all duration-300 active:scale-95 w-full sm:w-auto"
               >
                 Explore Programs
               </a>
             </div>
 
-            {/* Trust strip */}
-            <div className="pt-6" style={{ borderTop: '1px solid rgba(255,255,255,0.22)' }}>
-              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'rgba(255,255,255,0.60)' }}>
-                Trusted by Kenya&apos;s Leading Schools
-              </p>
-              <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
-                {[
-                  { icon: Users, value: '2,000+', label: 'Students' },
-                  { icon: Star,  value: '30+',    label: 'Schools'  },
-                  { icon: Crown, value: '98%',    label: 'Satisfaction' },
-                ].map(({ icon: Icon, value, label }) => (
-                  <div key={label} className="flex items-center gap-2.5">
-                    <Icon className="w-4 h-4" style={{ color: 'rgba(255,255,255,0.65)' }} />
-                    <span className="font-black text-white text-lg leading-none">{value}</span>
-                    <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.65)' }}>{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-              RIGHT â€” IMAGE CLUSTER
-          â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
-          <div
-            className="relative order-1 lg:order-2"
-            style={{ height: '520px', minHeight: '520px' }}
-          >
-            {/* â”€â”€ Rotating dashed ring behind center (positioned independently) â”€â”€ */}
-            <svg
-              className="ring-rotate ring-pulse absolute pointer-events-none"
-              style={{ top: '50%', left: '50%', width: '420px', height: '420px', marginTop: '-210px', marginLeft: '-210px' }}
-              viewBox="0 0 420 420"
-              aria-hidden="true"
-            >
-              <circle cx="210" cy="210" r="200" fill="none" stroke="white" strokeWidth="1.5" strokeDasharray="14 10" />
-              <circle cx="210" cy="210" r="170" fill="none" stroke="white" strokeWidth="1"   strokeDasharray="7 7" />
-            </svg>
+          {/* RIGHT — MORPHING BLOB GALLERY */}
+          <div className="relative flex items-center justify-center h-[500px] sm:h-[600px] lg:h-[calc(100vh-5rem)] -mx-4 sm:-mx-6 lg:mx-0 lg:min-h-[700px]">
+            <div className="relative w-full h-full flex items-center justify-center">
 
-            {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-                CENTER BLOB â€” wrapper pattern (FIX for stacking)
-                Outer div: centering transform only (no animation)
-                Inner div: morph + float animations only
-            â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
-            <div
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                zIndex: 10,
-              }}
-            >
+              {/* Central morphing blob */}
               <div
-                className="blob-morph float-up overflow-hidden"
+                className="absolute w-96 h-96 overflow-hidden shadow-2xl animate-morph animate-float"
                 style={{
-                  width: '320px',
-                  height: '320px',
-                  border: '4px solid rgba(255,255,255,0.38)',
-                  boxShadow: '0 24px 80px rgba(0,0,0,0.28), 0 0 0 10px rgba(255,255,255,0.08)',
+                  background: 'hsl(var(--primary) / 0.08)',
+                  filter: 'drop-shadow(0 25px 80px rgba(0,0,0,0.20))',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
                 }}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/images/hero-banner1.jpg"
-                    alt="Student learning STEM"
-                    fill
-                    className="object-cover object-center scale-105"
-                    priority
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.22) 100%)' }}
-                  />
-                </div>
+                <Image
+                  src="/images/stem-kids-coding.jpg"
+                  alt="Kids coding"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
               </div>
-            </div>
 
-            {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-                TOP-RIGHT BLOB â€” coding.jpg
-            â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
-            <div
-              style={{ position: 'absolute', top: '2%', right: '2%', zIndex: 8 }}
-            >
+              {/* Top-left blob */}
               <div
-                className="blob-morph-alt float-side overflow-hidden"
+                className="absolute w-64 h-64 overflow-hidden shadow-lg animate-morph hidden sm:block"
                 style={{
-                  width: '190px',
-                  height: '190px',
-                  border: '3px solid rgba(255,255,255,0.30)',
-                  boxShadow: '0 12px 48px rgba(0,0,0,0.22)',
-                  animationDelay: '1.2s',
+                  top: '5%',
+                  left: '-8%',
+                  borderRadius: '45% 55% 60% 40% / 55% 45% 40% 60%',
+                  animation: 'morph 6s ease-in-out infinite',
+                  animationDelay: '1s',
+                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
                 }}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/images/coding.jpg"
-                    alt="Students coding"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Image
+                  src="/images/stem-girls.jpg"
+                  alt="Girls STEM"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </div>
 
-            {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-                BOTTOM-LEFT BLOB â€” chess.jpg
-            â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
-            <div
-              style={{ position: 'absolute', bottom: '4%', left: '2%', zIndex: 8 }}
-            >
+              {/* Bottom-left blob */}
               <div
-                className="blob-morph-slow float-up overflow-hidden"
+                className="absolute w-72 h-72 overflow-hidden shadow-lg animate-morph hidden md:block"
                 style={{
-                  width: '210px',
-                  height: '210px',
-                  border: '3px solid rgba(255,255,255,0.30)',
-                  boxShadow: '0 12px 48px rgba(0,0,0,0.22)',
-                  animationDelay: '2.5s',
+                  bottom: '-10%',
+                  left: '-12%',
+                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
+                  animation: 'morph 7s ease-in-out infinite',
+                  animationDelay: '2s',
+                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
                 }}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/images/chess.jpg"
-                    alt="Students playing chess"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Image
+                  src="/images/stem-math.jpg"
+                  alt="Math"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </div>
 
-            {/* â”€â”€ Glass stat card â€” Students (right-center) â”€â”€ */}
-            <div
-              className="absolute z-20 flex items-center gap-3 px-4 py-3 rounded-2xl"
-              style={{
-                bottom: '30%',
-                right: '-4px',
-                background: 'rgba(255,255,255,0.18)',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.38)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-              }}
-            >
+              {/* Top-right blob */}
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 font-black text-sm"
-                style={{ background: '#0f1117', color: 'white' }}
+                className="absolute w-60 h-60 overflow-hidden shadow-lg animate-morph hidden sm:block"
+                style={{
+                  top: '2%',
+                  right: '-8%',
+                  borderRadius: '70% 30% 46% 54% / 30% 29% 71% 70%',
+                  animation: 'morph 6.5s ease-in-out infinite',
+                  animationDelay: '0.5s',
+                  filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.12))',
+                }}
               >
-                2K+
+                <Image
+                  src="/images/stem-chess.jpg"
+                  alt="Chess"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div>
-                <p className="font-bold text-sm text-white leading-tight">Students</p>
-                <p className="text-xs font-medium leading-tight" style={{ color: 'rgba(255,255,255,0.70)' }}>East Africa</p>
-              </div>
-            </div>
 
-            {/* â”€â”€ Glass stat card â€” Schools (left-center) â”€â”€ */}
-            <div
-              className="absolute z-20 flex items-center gap-3 px-4 py-3 rounded-2xl"
-              style={{
-                top: '28%',
-                left: '-4px',
-                background: 'rgba(255,255,255,0.18)',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.38)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-              }}
-            >
+              {/* Bottom-right blob */}
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 font-black text-sm"
-                style={{ background: '#0f1117', color: 'white' }}
+                className="absolute w-80 h-80 overflow-hidden shadow-xl animate-morph hidden lg:block"
+                style={{
+                  bottom: '-8%',
+                  right: '-10%',
+                  borderRadius: '56% 44% 50% 50% / 50% 50% 50% 50%',
+                  animation: 'morph 8s ease-in-out infinite',
+                  animationDelay: '1.5s',
+                  filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.15))',
+                  border: '4px solid hsl(var(--primary) / 0.1)',
+                }}
               >
-                30+
+                <Image
+                  src="/images/stem-robotics.jpg"
+                  alt="Robotics"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
-              <div>
-                <p className="font-bold text-sm text-white leading-tight">Schools</p>
-                <p className="text-xs font-medium leading-tight" style={{ color: 'rgba(255,255,255,0.70)' }}>Partners</p>
-              </div>
-            </div>
 
+              {/* Rotating ring decoration */}
+              <svg
+                className="absolute w-96 h-96 pointer-events-none animate-rotate"
+                style={{
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  opacity: 0.15,
+                }}
+                viewBox="0 0 200 200"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="90"
+                  fill="none"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="2"
+                  strokeDasharray="10,10"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="none"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="1"
+                  strokeDasharray="5,5"
+                />
+              </svg>
+
+
+            </div>
           </div>
-          {/* END right col */}
 
         </div>
       </div>
 
-      {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-          BOTTOM FEATURE BAR
-      â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-      <div
-        className="relative z-10"
-        style={{
-          background: 'rgba(0,0,0,0.18)',
-          backdropFilter: 'blur(14px)',
-          borderTop: '1px solid rgba(255,255,255,0.16)',
-        }}
-      >
+      {/* Bottom feature bar */}
+      <div className="relative z-10 bg-white/80 backdrop-blur-sm border-t border-[#e8e4dc] mt-4 lg:mt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { icon: Code2,  title: 'Coding & Robotics',  desc: 'Project-based STEM, Grades 1â€“8'     },
-              { icon: Brain,  title: 'Abacus Mental Math',  desc: 'Speed & accuracy from Pre-Primary'  },
-              { icon: Crown,  title: 'Chess Mastery',       desc: 'Strategy & critical thinking'       },
-              { icon: Bot,    title: 'CBC-Aligned',          desc: 'Integrated into school curriculum' },
+              { icon: Code2, title: 'Coding & Robotics', desc: 'Project-based STEM for Grades 1–8' },
+              { icon: Brain, title: 'Abacus Mental Math', desc: 'Speed & accuracy from Pre-Primary' },
+              { icon: Crown, title: 'Chess Mastery', desc: 'Strategy & critical thinking' },
+              { icon: Bot, title: 'CBC-Aligned', desc: 'Integrated into school curriculum' },
             ].map(({ icon: Icon, title, desc }) => (
-              <div
-                key={title}
-                className="flex items-start gap-3 p-3 rounded-xl transition-colors duration-200"
-                style={{ cursor: 'default' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.10)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
-              >
+              <div key={title} className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary/5 transition-colors duration-200">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                  style={{ background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.26)' }}
+                  style={{ background: 'hsl(var(--primary) / 0.1)' }}
                 >
-                  <Icon className="w-5 h-5 text-white" />
+                  <Icon className="w-5 h-5" style={{ color: 'hsl(var(--primary))' }} />
                 </div>
                 <div>
-                  <p className="font-bold text-sm text-white leading-tight">{title}</p>
-                  <p className="text-xs mt-0.5 leading-snug" style={{ color: 'rgba(255,255,255,0.62)' }}>{desc}</p>
+                  <p className="font-bold text-sm text-[#0f1117] leading-tight">{title}</p>
+                  <p className="text-xs text-[#8a8f9e] mt-0.5 leading-snug">{desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-
     </section>
   );
 }
