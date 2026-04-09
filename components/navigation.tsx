@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail } from 'lucide-react';
 
@@ -27,8 +28,14 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Premium Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-black text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-              K
+            <div className="w-12 h-12 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/images/apple-touch-icon.png"
+                alt="KEMSAP Logo"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div className="hidden sm:flex flex-col">
               <span className="font-black text-primary text-lg tracking-tight">KEMSAP</span>

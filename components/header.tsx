@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
@@ -28,8 +29,14 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2 group cursor-pointer animate-fade-in-down">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-            <span className="text-primary-foreground font-bold text-lg">K</span>
+          <div className="w-10 h-10 transform group-hover:scale-110 transition-transform duration-300">
+            <Image
+              src="/images/apple-touch-icon.png"
+              alt="KEMSAP Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 object-contain"
+            />
           </div>
           <div>
             <h1 className="text-lg font-bold text-foreground">KEMSAP</h1>
